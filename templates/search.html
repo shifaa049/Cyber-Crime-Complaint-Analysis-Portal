@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Complaints</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="search-header">
+    <h2>Search Complaints</h2>
+</div>
+
+<!-- SEARCH BOX -->
+<div class="search-container">
+
+    <form method="POST" class="search-form">
+
+        <input type="text"
+               name="keyword"
+               placeholder="Enter name or category">
+
+        <button type="submit">Search</button>
+
+    </form>
+
+</div>
+
+<!-- RESULTS TABLE -->
+<div class="table-container">
+
+<table class="complaint-table">
+
+    <thead>
+        <tr>
+            <th>Case ID</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Description</th>
+            <th>Category</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for row in results %}
+        <tr>
+            <td>{{ row[1] }}</td>  <!-- Case ID -->
+            <td>{{ row[2] }}</td>  <!-- Name -->
+            <td>{{ row[3] }}</td>  <!-- Address -->
+            <td>{{ row[4] }}</td>  <!-- Phone -->
+            <td>{{ row[5] }}</td>  <!-- Description -->
+            <td>{{ row[6] }}</td>  <!-- Category -->
+        </tr>
+        {% endfor %}
+    </tbody>
+
+</table>
+
+</div>
+
+<!-- RETURN BUTTON -->
+<div class="bottom-right">
+    <a href="/officer_home" class="return-btn">
+        ⬅ Return to Officer Home
+    </a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cyber Crime Complaint Analysis Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<!-- USER LOGIN ICON (TOP RIGHT) -->
+<div class="login-container">
+    <a href="/login" class="login-link">
+        <img src="/static/images/user_login.png" class="login-icon" alt="login">
+        <span class="login-text">Login</span>
+    </a>
+</div>
+<!-- HERO SECTION -->
+<div class="hero">
+
+    <img src="{{ url_for('static', filename='images/banner.jpg') }}" alt="Banner">
+
+    <div class="hero-text">
+
+        <!-- TITLE ADDED -->
+        <h1 class="main-title">Cyber Crime Complaint Analysis Portal</h1>
+
+        <p>Report • Analyze • Protect</p>
+
+        <a href="/complaint">
+            <button>REGISTER COMPLAINT</button>
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

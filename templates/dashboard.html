@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="topbar">
+    <h2>Cyber Crime Dashboard</h2>
+</div>
+
+<!-- CATEGORY CARDS -->
+<div class="dashboard-container">
+
+    {% for row in data %}
+    <a href="/category/{{ row[0] }}" class="card">
+        <span class="category-name">{{ row[0] }}</span>
+        <span class="badge">{{ row[1] }}</span>
+    </a>
+    {% endfor %}
+
+</div>
+
+<!-- RETURN BUTTON -->
+<div class="bottom-right">
+    <a href="/officer_home" class="return-btn">
+        ⬅ Return to Officer Home
+    </a>
+</div>
+
+</body>
+</html>

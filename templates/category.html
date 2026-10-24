@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ category }} Complaints</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="search-header">
+    <h2>{{ category }} Complaints</h2>
+</div>
+
+<div class="table-container">
+
+<table class="complaint-table">
+
+    <thead>
+        <tr>
+            <th>Case ID</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for row in complaints %}
+        <tr>
+            <td>{{ row[1] }}</td>  <!-- Case ID -->
+            <td>{{ row[2] }}</td>  <!-- Name -->
+            <td>{{ row[3] }}</td>  <!-- Address -->
+            <td>{{ row[4] }}</td>  <!-- Phone -->
+            <td>{{ row[5] }}</td>  <!-- Description -->
+        </tr>
+        {% endfor %}
+    </tbody>
+
+</table>
+
+</div>
+
+<!-- RETURN BUTTON -->
+<div class="bottom-right">
+    <a href="/dashboard" class="return-btn">⬅ Return to Dashboard</a>
+</div>
+
+</body>
+</html>

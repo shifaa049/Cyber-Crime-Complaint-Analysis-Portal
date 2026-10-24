@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Complaint Form</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<!-- BLUE HEADER -->
+<div class="form-header">
+    <h2>Submit Cyber Crime Complaint</h2>
+</div>
+
+<!-- CENTER FORM BOX -->
+<div class="form-container">
+
+    <form method="POST">
+
+        <label>Name</label>
+        <input type="text" name="name" required>
+
+        <label>Address</label>
+        <textarea name="address" rows="2" required></textarea>
+
+        <label>Phone Number</label>
+        <input type="text" name="phone" required>
+
+        <label>Complaint Description</label>
+        <textarea name="description" rows="5" required></textarea>
+
+        <button type="submit">Submit Complaint</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

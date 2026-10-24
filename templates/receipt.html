@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Complaint Receipt</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="receipt-box">
+
+    <h2>Complaint Registered Successfully</h2>
+
+    <p><b>Case ID:</b> {{ complaint[0] }}</p>
+    <p><b>Name:</b> {{ complaint[1] }}</p>
+    <p><b>Address:</b> {{ complaint[2] }}</p>
+    <p><b>Phone:</b> {{ complaint[3] }}</p>
+    <p><b>Category:</b> {{ complaint[4] }}</p>
+
+    <br><br>
+
+    <a href="/download_receipt/{{ complaint[0] }}">
+        Download Receipt (PDF)
+    </a>
+
+    <br><br>
+
+    <a href="/">Go Home</a>
+
+</div>
+
+</body>
+</html>
